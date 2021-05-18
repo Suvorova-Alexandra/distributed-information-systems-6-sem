@@ -1,0 +1,39 @@
+{
+   "programmers" : [
+     {
+      "FIO": "John Johnson",
+      "experience": 5,
+       "position": "Senior",
+       "coreTechnology": "java",
+       "salary": 2430.4
+     },
+     {
+       "FIO": "Glen Parkinson",
+       "experience":2,
+       "position": "Junior",
+       "coreTechnology": "java",
+       "salary": 1030.44
+     },
+     {
+       "FIO": "Ann Cristofer",
+       "experience":15,
+       "position": "Middle",
+       "coreTechnology": ".NET",
+       "salary": 4539.09
+     },
+     {
+       "FIO": "Molly Potter",
+       "experience":4,
+       "position": "Junior",
+       "coreTechnology": "C++",
+       "salary": 2030.4
+     },
+     {
+       "FIO": "Mal Gibson",
+       "experience":8,
+       "position": "Senior",
+       "coreTechnology": "python",
+       "salary": 3880.4
+     }
+   ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="style.css" />
+    <title>JSF JPA Crud Example</title>
+    <style type="text/css">
+        .updateBtnStyle {
+            width: 80px !important;
+        }
+        .col-sm-updated {
+            padding-top: 7px;
+        }
+        .col-sm-updated a {
+            text-decoration: none !important;
+        }
+        .text-edit {
+            margin-left: 123px !important;
+            margin-top: 29px !important;
+        }
+    </style>
+</h:head>
+<h:body>
+    <center><h2><h:outputText value="Edit Shop Record"/></h2></center>
+    <h:form id="editShopForm" styleClass="form-horizontal">
+        <div class="form-group">
+            <h:outputLabel styleClass="control-label col-sm-2">Id:</h:outputLabel>
+            <div class="col-sm-4"><h:inputText id="id" value="#{shopController.shopForUpdate.idShop}" p:readonly="true" styleClass="form-control" /></div>
+        </div>
+        <div class="form-group">
+            <h:outputLabel styleClass="control-label col-sm-2">New Name:</h:outputLabel>
+            <div class="col-sm-4"><h:inputText id="name" value="#{shopController.shopForUpdate.shopName}" styleClass="form-control" required="true" requiredMessage="Shop Name Cannot Be Blank" /></div>
+            <h:message for="name" styleClass="text text-danger" />
+        </div>
+        <div class="form-group">
+            <h:outputLabel styleClass="control-label col-sm-2">New Phone:</h:outputLabel>
+            <div class="col-sm-4"><h:inputText id="phone" value="#{shopController.shopForUpdate.phone}" styleClass="form-control" required="true" requiredMessage="Shop Phone Cannot Be Blank" /></div>
+            <h:message for="phone" styleClass="text text-danger" />
+        </div>
+        <div class="form-group">
+            <h:outputLabel styleClass="control-label col-sm-2">New Type:</h:outputLabel>
+            <br/>
+            <h:selectOneMenu value = "#{shopController.shopForUpdate.shopType}" styleClass="form-control">
+                <f:selectItem itemValue = "Бакалея" itemLabel = "Бакалея" />
+                <f:selectItem itemValue = "Бутик" itemLabel = "Бутик" />
+                <f:selectItem itemValue = "Гипермаркет" itemLabel = "Гипермаркет" />
+                <f:selectItem itemValue = "Дискаунтер" itemLabel = "Дискаунтер" />
+                <f:selectItem itemValue = "Дрогери" itemLabel = "Дрогери" />
+                <f:selectItem itemValue = "Зоомагазин" itemLabel = "Зоомагазин" />
+                <f:selectItem itemValue = "Магазин фиксированной цены" itemLabel = "Магазин фиксированной цены" />
+                <f:selectItem itemValue = "Супермаркет" itemLabel = "Супермаркет" />
+                <f:selectItem itemValue = "Хозяйственный магазин" itemLabel = "Хозяйственный магазин" />
+                <f:selectItem itemValue = "Off-price" itemLabel = "Off-price" />
+            </h:selectOneMenu><br/></div>
+        <div class="form-group">
+            <div class="col-sm-2" />
+            <div class="col-sm-4">
+                <h:commandButton value="Update" action="#{shopController.updateShop(shopController.shopForUpdate)}" styleClass="btn btn-primary updateBtnStyle" />
+            </div>
+            <div class="col-sm-1" />
+            <div class="col-sm-updated"><h:outputLink value="shop.xhtml">View Shop Record List</h:outputLink></div>
+        </div>
+        <div class="text text-success text-edit"><h:message for="id" /></div>
+    </h:form>
+</h:body>
+</html>

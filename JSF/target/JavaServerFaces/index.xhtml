@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="style.css" />
+    <title>Customer Crud Example</title>
+    <style type="text/css">
+        .tableUpdated {
+            width: 90% !important;
+            margin: 17px 58px 0 !important;
+        }
+        .btnSpace {
+            margin: 17px;
+        }
+    </style>
+</h:head>
+<h:body>
+    <h2>Choose an object for transactions: </h2>
+    <h:form>
+        <h:commandButton value = "Customers" action = "customer.xhtml?faces-redirect=true" styleClass="btn btn-danger"></h:commandButton>
+    <br/>
+        <br/>
+        <h:commandButton value = "Shops" action = "shop.xhtml?faces-redirect=true" styleClass="btn btn-danger"></h:commandButton>
+    </h:form>
+</h:body>
+</html>

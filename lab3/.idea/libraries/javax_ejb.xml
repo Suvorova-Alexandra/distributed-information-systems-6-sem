@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javax.ejb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.idea/Work/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/Work/mysql-connector-java-8.0.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

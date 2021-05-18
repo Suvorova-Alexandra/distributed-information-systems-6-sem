@@ -1,0 +1,29 @@
+<tourism>
+<directions>
+
+    <direction type="Ecotourism" ID="001">
+    </direction>
+
+    <direction type="Recreational" ID="002">
+    </direction>
+
+    <direction type="Business" ID="003">
+    </direction>
+
+    <direction type="Gastronomic" ID="004">
+    </direction>
+
+    <direction type="Sport" ID="005">
+    </direction>
+
+    <direction type="Educative" ID="006">
+    </direction>
+
+    <direction type="Health-improving" ID="007">
+    </direction>
+
+    <direction type="Religious" ID="008">
+    </direction>
+
+</directions>
+</tourism>

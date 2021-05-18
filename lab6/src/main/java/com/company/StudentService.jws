@@ -1,0 +1,55 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class StudentService {
+
+    public String findStudentByLastname(String lastname) {
+        StringBuilder foundStudent=new StringBuilder();
+        int flag=0;
+        String line;
+        try (BufferedReader reader = new BufferedReader(new FileReader("D:/students.txt"))) {
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split("; ");
+                if (data[0].contains(lastname)) {
+                    flag++;
+                    foundStudent.append(data[0]);
+                    foundStudent.append("; ");
+                    foundStudent.append(data[1]);
+                    break;
+                }
+            }
+            if(flag==0){
+                foundStudent.append("No student with such lastname found");
+            }
+        } catch (IOException e) {
+            foundStudent.append( "Sorry, server error occurred");
+        }
+        return foundStudent.toString();
+    }
+
+    public String findStudentByAverageScore(String averageScore) {
+        StringBuilder foundStudent=new StringBuilder();
+        int flag=0;
+        String line;
+        try (BufferedReader reader = new BufferedReader(new FileReader("D:/students.txt"))) {
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split("; ");
+                if (averageScore.equals(data[1])) {
+                    flag++;
+                    foundStudent.append(data[0]);
+                    foundStudent.append("; ");
+                    foundStudent.append(data[1]);
+                    break;
+                }
+            }
+            if(flag==0){
+                foundStudent.append("No student with such lastname found");
+            }
+        } catch (IOException e) {
+            foundStudent.append( "Sorry, server error occurred");
+        }
+        return foundStudent.toString();
+    }
+
+}
